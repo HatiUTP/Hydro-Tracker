@@ -1,0 +1,89 @@
+/* Login.css */
+.login-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f8fa;
+    padding: 1rem;
+  }
+  
+  .login-form {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .login-form h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .form-group {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group input {
+    width: 93%;
+    padding: 0.75rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+    background-color: gainsboro;
+    color: black
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #3498db;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #2980b9;
+  }
+  
+  @media (max-width: 480px) {
+    .login-form {
+      padding: 1.5rem;
+    }
+    
+    .login-container{
+        padding: 0;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
