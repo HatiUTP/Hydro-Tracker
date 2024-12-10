@@ -1,3 +1,4 @@
+// src/components/ConfiguracionUsuario.tsx
 import React, { useState, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './ConfiguracionUsuario.css';

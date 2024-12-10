@@ -1,8 +1,10 @@
+// src/App.tsx
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './components/Login';
 import ConfiguracionUsuario from './components/ConfiguracionUsuario';
 import PanelPrincipal from './components/PanelPrincipal';
+import Navbar from './components/Navbar';
 
 interface PrivateRouteProps {
   children: React.ReactNode;
@@ -22,7 +24,10 @@ const App: React.FC = () => {
           path="/configuracion" 
           element={
             <PrivateRoute>
-              <ConfiguracionUsuario />
+              <>
+                <Navbar />
+                <ConfiguracionUsuario />
+              </>
             </PrivateRoute>
           } 
         />
@@ -30,7 +35,10 @@ const App: React.FC = () => {
           path="/panel" 
           element={
             <PrivateRoute>
-              <PanelPrincipal />
+              <>
+                <Navbar />
+                <PanelPrincipal />
+              </>
             </PrivateRoute>
           } 
         />

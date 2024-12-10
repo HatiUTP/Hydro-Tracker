@@ -1,3 +1,4 @@
+// src/components/Login.tsx
 import React, { useState, FormEvent, ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
@@ -18,6 +19,8 @@ const Login: React.FC = () => {
     e.preventDefault();
     if (credentials.username && credentials.password) {
       localStorage.setItem('isAuthenticated', 'true');
+      localStorage.setItem('username', credentials.username);
+      localStorage.setItem('password', credentials.password);
       navigate('/configuracion');
     }
   };
